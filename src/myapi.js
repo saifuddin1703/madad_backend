@@ -26,7 +26,9 @@ app.get("/user",(req,res)=>{
         console.log(users);
     })
  })
-
+ app.get("/",(req,res)=>{
+   res.send("hellow")
+   })
 // get user by name
  app.get("/user/:name",(req,res)=>{
      const name= req.params.name;

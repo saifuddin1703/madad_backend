@@ -26,7 +26,7 @@ app.get("/user",(req,res)=>{
         console.log(users);
     })
  })
- app.get("/",(req,res)=>{
+ app.get("/new",(req,res)=>{
    res.send("hellow")
    })
 // get user by name

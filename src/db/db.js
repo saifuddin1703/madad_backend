@@ -1,6 +1,6 @@
 const mongoose= require("mongoose")
 // url of the host where the mongo process is running
-const url="mongodb://localhost:27017/userdb"
+const url= process.env.MONGODB_URI ||"mongodb://localhost:27017/userdb"
 // just confirming whether the it is imported or not
 console.log("db is imported")
 

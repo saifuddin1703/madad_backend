@@ -125,3 +125,7 @@ app.get("/user",(req,res)=>{
           console.log(users);
       })
    })
+
+   app.get("/",(req,res)=>{
+    res.send("api is running");
+  })

@@ -12,6 +12,16 @@ app.listen(port,()=>{
 });
 app.use(express.json())
 
+
+app.delete("/logout",(req,res)=>{
+    const username= req.username;
+    const password= req.password;
+    loginmodel.findOne({username:username},(err,user)=>{
+        loginmodel.findById({id:user._id},(err,user)=>{
+            res.send("user logged out")
+        })
+    })
+})
 // method to login user
 app.post("/login",(req,res)=>{
 const username= req.username;

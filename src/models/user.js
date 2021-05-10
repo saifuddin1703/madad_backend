@@ -3,7 +3,8 @@ const mongoose= require("mongoose")
 // creating the user schema 
 const usersc= new mongoose.Schema({
     username:{type:String,
-        default:""
+        default:"",
+        unique:true
         },
     displayname:{type:String,
     default:""

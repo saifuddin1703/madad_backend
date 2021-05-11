@@ -14,8 +14,8 @@ app.use(express.json())
 
 
 app.delete("/logout",(req,res)=>{
-    const username= req.username;
-    const password= req.password;
+    const username= req.body.username;
+    const password= req.body.password;
     loginmodel.findOne({username:username},async (err,user)=>{
       await user.delete()
       res.status(200).send("logged out");

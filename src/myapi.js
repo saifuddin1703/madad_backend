@@ -17,15 +17,14 @@ app.delete("/logout",(req,res)=>{
     const username= req.username;
     const password= req.password;
     loginmodel.findOne({username:username},(err,user)=>{
-        loginmodel.findById({id:user._id},(err,user)=>{
-            res.send("user logged out")
-        })
+      await user.delete()
+      res.status(200).send("logged out");
     })
 })
 // method to login user
 app.post("/login",(req,res)=>{
-const username= req.username;
-const password= req.password;
+const username= req.body.username;
+const password= req.body.password;
 signup.findOne({username:username},(err,user)=>{
     if(user==null){
      res.send("Invalid usrename or not signed up");

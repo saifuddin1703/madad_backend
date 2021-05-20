@@ -2,7 +2,8 @@ const express= require('express');
 const userrout= require("./routers/user")
 const auth= require("./routers/authentication")
 const app= express();
-const port=process.env.PORT || 3000;
+const port=process.env.PORT || 8000||3000;
+
 require("./db/db")
 
 app.listen(port,()=>{
@@ -10,9 +11,8 @@ app.listen(port,()=>{
 });
 app.use(express.json())
 app.use("/user",userrout);
+app.use('/uploads', express.static('./uploads'));
 app.use("/authentication",auth);
-
-
 
  app.get("/new",(req,res)=>{
    res.send("hellow")

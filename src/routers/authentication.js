@@ -5,6 +5,10 @@ const express= require("express");
 const loginmodel= require("../models/loggedin")
 const signup= require("../models/signedupusers")
 const app = express.Router()
+ const upload = require("../imageuploading")
+app.post("/image",upload,(req,res)=>{
+    res.status(200).send(req.file.path);
+})
 
 // method to login user
 app.post("/login",(req,res)=>{
@@ -36,7 +40,6 @@ app.post("/login",(req,res)=>{
 
     app.delete("/logout",(req,res)=>{
         const username= req.body.username;
-        const password= req.body.password;
         loginmodel.findOne({username:username},async (err,user)=>{
           await user.delete()
           res.status(200).send("logged out");
@@ -58,12 +61,12 @@ app.post("/login",(req,res)=>{
                 const signupref=new signup({token:token,
                     username:req.body.username,
                     password:req.body.password});
-                signupref.save((err,model)=>{
+                signupref.save(()=>{
                     console.log(token)
                     console.log("signin successfull")
                 })
                 //after signin adding the user to loged in user collection
-                loginref.save((err,model)=>{
+                loginref.save(()=>{
                     console.log(token)
                     console.log("login successfull")
                 })
@@ -78,7 +81,7 @@ app.post("/login",(req,res)=>{
                     token:token,
                 })
     
-                usermodel.save((err,user)=>{
+                usermodel.save(()=>{
                     res.send(usermodel)
                     console.log(token)
                 })

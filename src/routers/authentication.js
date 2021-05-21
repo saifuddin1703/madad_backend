@@ -71,20 +71,7 @@ app.post("/login",(req,res)=>{
                     console.log("login successfull")
                 })
     
-            // adding the user to the user collection
-                const usermodel= new model({
-                    username:req.body.username,
-                    displayname:req.body.displayname,
-                    age:req.body.age,
-                    phone:req.body.phone,
-                    address:req.body.address,
-                    token:token,
-                })
-    
-                usermodel.save(()=>{
-                    res.send(usermodel)
-                    console.log(token)
-                })
+           
             }
         })
     })

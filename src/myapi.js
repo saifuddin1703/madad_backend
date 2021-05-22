@@ -14,6 +14,7 @@ app.use("/user",userrout);
 app.use('/uploads', express.static('./uploads'));
 app.use("/authentication",auth);
 
+
  app.get("/new",(req,res)=>{
    res.send("hellow")
    })

@@ -19,9 +19,10 @@ app.post("/login",(req,res)=>{
          res.send("Invalid usrename or not signed up");
         }else{
            if(password!=user.password){
-            res.send("Invalid password")
+            res.status(401).send("Invalid password")
            }else{
               loginref= new loginmodel({
+
                 token:user.token,
                 username:username,
                 password:password

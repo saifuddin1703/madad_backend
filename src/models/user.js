@@ -9,13 +9,10 @@ const usersc= new mongoose.Schema({
     displayname:{type:String,
     default:""
     },
-    age:{type:String,
+    DOB:{type:String,
         default:""
         },
     phone:{type:String,
-        default:""
-        },
-    address:{type:String,
         default:""
         },
     token:{type:String,

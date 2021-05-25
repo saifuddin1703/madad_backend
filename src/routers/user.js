@@ -5,7 +5,7 @@ const express= require("express");
 const app = express.Router()
 
 // adding the user to database
-app.post("/user",(req,res)=>{
+app.post("/add",(req,res)=>{
     var user= new model( {username:req.body.username,
      displayname:req.body.displayname,
      age:req.body.age,
@@ -27,8 +27,8 @@ app.post("/user",(req,res)=>{
      })
   })
   // get user by token
- app.get("/user/:token",(req,res)=>{
-    const name= req.params.token;
+ app.get("/token",(req,res)=>{
+    const token= req.params.token;
    model.findOne({token: token},(err,users)=>{
          res.status(200).send(users);
          console.log(users);

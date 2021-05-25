@@ -72,7 +72,7 @@ app.post("/login",(req,res)=>{
                     console.log("login successfull")
                 })
     
-              res.send("token")
+              res.send(token)
             }
         })
     })

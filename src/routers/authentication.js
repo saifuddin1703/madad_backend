@@ -7,7 +7,11 @@ const signup= require("../models/signedupusers")
 const app = express.Router()
  const upload = require("../imageuploading")
 app.post("/image",upload,(req,res)=>{
-    res.status(200).send(req.hostname+req.file.path);
+    res.status(200).send({
+        "username":" ",
+        "password":" ",
+        "token":req.file.path
+    });
 })
 
 // method to login user

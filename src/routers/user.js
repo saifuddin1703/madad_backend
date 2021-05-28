@@ -12,7 +12,7 @@ app.post("/add",(req,res)=>{
      phone:req.body.phone,
      address:req.body.address,
      imageUrl:req.body.imageUrl,
-     token:token,
+     token:req.body.token,
 
     });
     user.save((err,user)=>{

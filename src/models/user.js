@@ -15,6 +15,10 @@ const usersc= new mongoose.Schema({
     phone:{type:String,
         default:""
         },
+    imageUrl:{
+        type:String,
+        default:" "
+    },
     token:{type:String,
         default:""
         }
@@ -23,5 +27,5 @@ const usersc= new mongoose.Schema({
 // creating the model from the schema which point to the data collection in mongodb
 const usermodel= mongoose.model("user",usersc)
 
-// module
+// module 
 module.exports=usermodel

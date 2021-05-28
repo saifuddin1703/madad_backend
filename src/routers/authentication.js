@@ -1,6 +1,5 @@
 const auth= require("../models/loggedin")
 const jwt= require("jsonwebtoken")
-const model= require("../models/user")
 const express= require("express");
 const loginmodel= require("../models/loggedin")
 const signup= require("../models/signedupusers")
@@ -8,9 +7,8 @@ const app = express.Router()
  const upload = require("../imageuploading")
 app.post("/image",upload,(req,res)=>{
     res.status(200).send({
-        "username":" ",
-        "password":" ",
-        "token":req.file.path
+        "imagename":req.file.filename,
+         "imagepath":req.file.path
     });
 })
 
@@ -20,7 +18,7 @@ app.post("/login",(req,res)=>{
     const password= req.body.password;
     signup.findOne({username:username},(err,user)=>{
         if(user==null){
-         res.send("Invalid usrename or not signed up");
+         res.status(400).send("Invalid usrename or not signed up");
         }else{
            if(password!=user.password){
             res.status(401).send("Invalid password")
@@ -54,9 +52,9 @@ app.post("/login",(req,res)=>{
     //method to signup the user
     app.post("/signup",(req, res)=>{
         //checking if the user already signed up or not
-        model.findOne({username: req.body.username},(err, user)=>{
+        signup.findOne({username: req.body.username},(err, user)=>{
            //user already signedup
-            if(user!=null) res.status(400).send("user exists");
+            if(user!=null) return res.status(400).send("user exists");
             // user is not signed up
             if(user==null){
                 //creating jwt for the user credentials

@@ -11,7 +11,10 @@ app.post("/add",(req,res)=>{
      age:req.body.age,
      phone:req.body.phone,
      address:req.body.address,
-     token:token});
+     imageUrl:req.body.imageUrl,
+     token:token,
+
+    });
     user.save((err,user)=>{
         console.log("user inserted");
         console.log(req.body)
@@ -27,9 +30,9 @@ app.post("/add",(req,res)=>{
      })
   })
   // get user by token
- app.get("/token",(req,res)=>{
+ app.get("/:token",(req,res)=>{
     const token= req.params.token;
-   model.findOne({token: token},(err,users)=>{
+   model.findOne({token},(err,users)=>{
          res.status(200).send(users);
          console.log(users);
      })

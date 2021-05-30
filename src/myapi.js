@@ -2,11 +2,14 @@ const express= require('express');
 const userrout= require("./routers/user")
 const auth= require("./routers/authentication")
 const app= express();
+const http= require('http')
+const server= http.createServer(app)
+const io= require('socket.io')(server)
 const port=process.env.PORT ||8000;
 
 require("./db/db")
 
-app.listen(port,()=>{
+server.listen(port,()=>{
     console.log("listening on port : "+port);
 });
 app.use(express.json())

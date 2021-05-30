@@ -8,7 +8,7 @@ const app = express.Router()
 app.post("/add",(req,res)=>{
     var user= new model( {username:req.body.username,
      displayname:req.body.displayname,
-     age:req.body.age,
+     DOB:req.body.DOB,
      phone:req.body.phone,
      address:req.body.address,
      imageUrl:req.body.imageUrl,

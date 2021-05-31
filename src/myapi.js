@@ -30,11 +30,8 @@ app.use("/authentication",auth);
 
 
   io.on("connection", (socket) => {
-    socket.on("message", (arg,callback) => {
+    socket.on("message", (arg) => {
       console.log(arg); // world
-      callback({
-        status: "ok"
-      });
     });
   });
 

@@ -1,0 +1,149 @@
+[33mcommit 2ececf3097fd481ccd69b299ba7069bc33f39a39[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Saifuddin225 <saifuddinahmed50@gmail.com>
+Date:   Sun May 30 20:35:17 2021 +0530
+
+    adding socket.io functionality
+
+[33mcommit 3708a5ddfc5ba9422ac3d261e0aea993571561b7[m[33m ([m[1;31morigin/main[m[33m, [m[1;31mheroku/main[m[33m)[m
+Author: Saifuddin225 <saifuddinahmed50@gmail.com>
+Date:   Fri May 28 12:45:36 2021 +0530
+
+    more error fixed
+
+[33mcommit c3127c331a2f70ca6ce4e65c6fb53c95e38d4a58[m
+Author: Saifuddin225 <saifuddinahmed50@gmail.com>
+Date:   Fri May 28 11:05:31 2021 +0530
+
+    image upload route updated
+
+[33mcommit c763df50d59f36a42b4d7b84aa6765d89b39bf9c[m
+Author: Saifuddin225 <saifuddinahmed50@gmail.com>
+Date:   Fri May 28 11:04:08 2021 +0530
+
+    git
+
+[33mcommit ae9041f2dc44c78540288b42fe4a47b6a29778ed[m
+Author: Saifuddin225 <saifuddinahmed50@gmail.com>
+Date:   Thu May 27 11:12:19 2021 +0530
+
+    fixed errors
+
+[33mcommit 57a1820f2253f5aa103c9140f4721954d6617d6a[m
+Author: Saifuddin225 <saifuddinahmed50@gmail.com>
+Date:   Tue May 25 19:54:04 2021 +0530
+
+    all bugs fixed
+
+[33mcommit dd6f96b576f9f1cd8c281fdbb72fb56f2c0b25a1[m
+Author: Saifuddin225 <saifuddinahmed50@gmail.com>
+Date:   Tue May 25 19:52:34 2021 +0530
+
+    bugs fixed
+
+[33mcommit 1dd8e9271024aa7151d88c76c2eb954654b91041[m
+Author: Saifuddin225 <saifuddinahmed50@gmail.com>
+Date:   Tue May 25 19:50:07 2021 +0530
+
+    new changes
+
+[33mcommit 1f39d72a1002d2a26d6d17aff4426afc248dea92[m
+Author: Saifuddin225 <saifuddinahmed50@gmail.com>
+Date:   Tue May 25 19:29:22 2021 +0530
+
+    new changes committed
+
+[33mcommit 3c4401b664564c5c4069bfc91494c246198db2aa[m
+Author: Saifuddin225 <saifuddinahmed50@gmail.com>
+Date:   Tue May 25 19:12:02 2021 +0530
+
+    jj
+
+[33mcommit 0ecf790450628cdaa2c10da6a1fb06b5c3aac04a[m
+Author: Saifuddin225 <saifuddinahmed50@gmail.com>
+Date:   Sat May 22 18:08:55 2021 +0530
+
+    new commit
+
+[33mcommit 267f5a3530409e41b7d8dfa195be2e9ddc7225e2[m
+Author: Saifuddin225 <saifuddinahmed50@gmail.com>
+Date:   Fri May 21 11:32:21 2021 +0530
+
+    changes added
+
+[33mcommit 1303631fc88e7ae076165b04baadfc099a0334ca[m
+Author: Saifuddin225 <saifuddinahmed50@gmail.com>
+Date:   Thu May 20 12:04:43 2021 +0530
+
+    upload image feature added
+
+[33mcommit a2535351bc44522978f0c8d7392e32ace6c0824c[m
+Author: Saifuddin225 <saifuddinahmed50@gmail.com>
+Date:   Wed May 19 21:27:43 2021 +0530
+
+    routers are added
+
+[33mcommit 8acddffb021c9c51bd92ec0a6de81b005457be30[m
+Author: Saifuddin225 <saifuddinahmed50@gmail.com>
+Date:   Sun May 16 17:48:33 2021 +0530
+
+    errors fixed
+
+[33mcommit e803ea3eb6e5caad0e72188e78ca845cd9d2aba8[m
+Author: Saifuddin225 <saifuddinahmed50@gmail.com>
+Date:   Tue May 11 13:59:24 2021 +0530
+
+    error fixed
+
+[33mcommit 10ecb87756f08dff6f35e3b21ec3e34806ced499[m
+Author: Saifuddin225 <saifuddinahmed50@gmail.com>
+Date:   Tue May 11 13:51:06 2021 +0530
+
+    new error fixed
+
+[33mcommit d8f639bd3e2372da4f8975fe9cf42d473a5551d7[m
+Author: Saifuddin225 <saifuddinahmed50@gmail.com>
+Date:   Tue May 11 13:44:01 2021 +0530
+
+    bug fixed
+
+[33mcommit 69752550b9ce897004a77bec65283a3be8ecbaf5[m
+Author: Saifuddin225 <saifuddinahmed50@gmail.com>
+Date:   Mon May 10 15:09:08 2021 +0530
+
+    get added
+
+[33mcommit c52909a46482e6366679601f1af61c412c6495c5[m[33m ([m[1;31mnew/main[m[33m)[m
+Author: Saifuddin225 <saifuddinahmed50@gmail.com>
+Date:   Mon May 10 14:08:12 2021 +0530
+
+    authentication feature added
+
+[33mcommit 243dcca80d4a340b5d4030c1efb7235a9c86f514[m
+Author: Saifuddin225 <saifuddinahmed50@gmail.com>
+Date:   Sat May 1 16:53:00 2021 +0530
+
+    signup and login features are added
+
+[33mcommit 34639324d9474dd80b04f076705c5076de9eefd6[m
+Author: Saifuddin225 <saifuddinahmed50@gmail.com>
+Date:   Fri Apr 23 11:57:26 2021 +0530
+
+    new update
+
+[33mcommit 6780cd8b1861a8736c8c2d428c698d0c4d277556[m
+Author: Saifuddin225 <saifuddinahmed50@gmail.com>
+Date:   Thu Apr 22 21:40:58 2021 +0530
+
+    new added
+
+[33mcommit a3df274b123698ec9f936fe5e2babe3726d28a27[m
+Author: Saifuddin225 <saifuddinahmed50@gmail.com>
+Date:   Thu Apr 22 21:12:22 2021 +0530
+
+    updated
+
+[33mcommit 08ca4ab5d9102b519256826b816dcb1937abf611[m
+Author: Saifuddin225 <saifuddinahmed50@gmail.com>
+Date:   Thu Apr 22 21:08:49 2021 +0530
+
+    initial commit

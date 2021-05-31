@@ -26,3 +26,13 @@ app.use("/authentication",auth);
    app.get("/",(req,res)=>{
     res.send("api is running");
   })
+
+
+  io.on("connection", (socket) => {
+    socket.on("message", (arg,callback) => {
+      console.log(arg); // world
+      callback({
+        status: "ok"
+      });
+    });
+  });

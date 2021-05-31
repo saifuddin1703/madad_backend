@@ -32,9 +32,10 @@ app.use("/authentication",auth);
   io.on("connection", (socket) => {
     socket.on("message", (arg) => {
       console.log(arg); // world
+      socket.emit("hello","message recieved")
     });
   });
 
-  io.on("connection", (socket) => {
-    socket.broadcast.emit("hello", "world");
-  });
+  // io.on("connection", (socket) => {
+  //   socket.broadcast.emit("hello", "world");
+  // });

@@ -3,9 +3,11 @@ const userrout= require("./routers/user")
 const auth= require("./routers/authentication")
 const app= express();
 const http= require('http')
-
+const messageModel= require("./models/emergency_message")
 const port=process.env.PORT ||8000;
-const server= app.listen(port)
+const server= app.listen(port,()=>{
+  console.log("listening on port : "+ port)
+})
 
 const io= require('socket.io')(server)
 require("./db/db")
@@ -31,11 +33,12 @@ app.use("/authentication",auth);
 
   io.on("connection", (socket) => {
     socket.on("message", (arg) => {
-      console.log(arg); // world
+      console.log(arg);
+      var message= new messageModel(arg)
+
+      message.save((err, message)=>{
+           console.log("message saved to database");
+      })
       socket.emit("hello","message recieved")
     });
   });
-
-  // io.on("connection", (socket) => {
-  //   socket.broadcast.emit("hello", "world");
-  // });

@@ -10,11 +10,8 @@ const server= app.listen(port,()=>{
 })
 
 const io= require('socket.io')(server)
-require("./db/db")
+require("./db/db") 
 
-// server.listen(port,()=>{
-//     console.log("listening on port : "+port);
-// });
 app.use(express.json())
 app.use("/user",userrout);
 app.use('/uploads', express.static('./uploads'));
@@ -39,6 +36,6 @@ app.use("/authentication",auth);
       message.save((err, message)=>{
            console.log("message saved to database");
       })
-      socket.emit("hello","message recieved")
+      socket.broadcast.emit("hello","message recieved")
     });
   });

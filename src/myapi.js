@@ -36,6 +36,6 @@ app.use("/authentication",auth);
       message.save((err, message)=>{
            console.log("message saved to database");
       })
-      socket.broadcast.emit("hello","message recieved")
+      socket.broadcast.emit("hello",arg)
     });
   });

@@ -1,4 +1,5 @@
 const mongoose= require("mongoose")
+const messagemodel = require("./emergency_message")
 
 // creating the user schema 
 const usersc= new mongoose.Schema({
@@ -18,6 +19,11 @@ const usersc= new mongoose.Schema({
     imageUrl:{
         type:String,
         default:" "
+    },
+    messages:Array,
+    updated:{
+        type:Boolean,
+        default: true
     },
     token:{type:String,
         default:""

@@ -40,12 +40,7 @@ app.use("/authentication",auth);
       console.log(arg);
       var message= new messageModel(arg)
       var messagetosend= {
-        data:{sentBy:arg.sentBy,
-          sentFrom:arg.sentFrom,
-          title:arg.title,
-          Type:arg.Type,
-          imageUrl:arg.imageUrl
-        },
+        data:"hellow",
         notification:{
           title:"New notification",
           body:"sending from the server"

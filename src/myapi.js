@@ -48,7 +48,7 @@ app.use("/authentication",auth);
         topic:"messagesSentByServer"
       }
       
-      admin.messaging().send(message).then((response)=>{
+      admin.messaging().send(messagetosend).then((response)=>{
             console.log("Successfully send message to all the clients");
       }).catch((error)=>{
         console.log(error);

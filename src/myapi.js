@@ -50,6 +50,8 @@ app.use("/authentication",auth);
       
       admin.messaging().send(message).then((response)=>{
             console.log("Successfully send message to all the clients");
+      }).catch((error)=>{
+        console.log(error);
       })
       message.save((err, message)=>{
            console.log("message saved to database");

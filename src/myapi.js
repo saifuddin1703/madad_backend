@@ -39,8 +39,11 @@ app.use("/authentication",auth);
     socket.on("message", (arg) => {
       console.log(arg);
       var message= new messageModel(arg)
+      // var data={
+
+      // }
       var messagetosend= {
-        data:"hellow",
+        data:{mes:'hellow'},
         notification:{
           title:"New notification",
           body:"sending from the server"

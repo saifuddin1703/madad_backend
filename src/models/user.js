@@ -20,7 +20,10 @@ const usersc= new mongoose.Schema({
         type:String,
         default:" "
     },
-    messages:Array,
+    messages:{
+        type:Array,
+        default:[]
+    },
     updated:{
         type:Boolean,
         default: true

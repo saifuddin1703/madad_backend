@@ -5,6 +5,13 @@ const app= express();
 const http= require('http')
 const messageModel= require("./models/emergency_message")
 const port=process.env.PORT ||8000;
+const admin= require('firebase-admin');
+
+const serviceAccount= require('../firebase_service_private_key/madad-da602-firebase-adminsdk-ogr2s-86c67907b4.json')
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount)
+});
 const server= app.listen(port,()=>{
   console.log("listening on port : "+ port)
 })
@@ -32,10 +39,21 @@ app.use("/authentication",auth);
     socket.on("message", (arg) => {
       console.log(arg);
       var message= new messageModel(arg)
-
+      var messagetosend= {
+        data:arg,
+        notification:{
+          title:"New notification",
+          body:"sending from the server"
+        },
+        topic:"messagesSentByServer"
+      }
+      
+      admin.messaging().send(message).then((response)=>{
+            console.log("Successfully send message to all the clients");
+      })
       message.save((err, message)=>{
            console.log("message saved to database");
       })
-      socket.broadcast.emit("hello",arg)
+     
     });
   });

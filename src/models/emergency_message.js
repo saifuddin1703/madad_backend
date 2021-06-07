@@ -5,6 +5,10 @@ const messageSchema= new mongoose.Schema({
         type:String,
         required: true
     },
+    sentAt:{
+        type:String,
+        required: true
+    },
     sentFrom:{
         latitude:{type: String},
         longitude: {type: String}
@@ -22,6 +26,10 @@ const messageSchema= new mongoose.Schema({
     description:{
         type:String,
         required: true
+    },
+    seenBy:{
+        type:Array,
+        default:[]
     },
     helped:{
         type:Boolean,

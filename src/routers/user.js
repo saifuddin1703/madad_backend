@@ -1,7 +1,8 @@
 // const { modelName } = require("../models/loggedin");
 const model= require("../models/user")
+const messagemodel= require("../models/emergency_message")
 const express= require("express");
-
+const usermodel = require("../models/user");
 const app = express.Router()
 
 // adding the user to database
@@ -23,7 +24,7 @@ app.post("/add",(req,res)=>{
  });
  
  // get all the users stored in the database 
- app.get("/",(req,res)=>{
+ app.get("/allusers",(req,res)=>{
    model.find({},(err,users)=>{
          res.status(200).send(users);
          console.log(users);
@@ -38,4 +39,20 @@ app.post("/add",(req,res)=>{
      })
   })
 
+  app.get("/:id",(req,res)=>{
+    const _id= req.params.id;
+   messagemodel.findById({_id},(err,message)=>{
+       console.log(message);
+       res.status(200).send(message)
+   })
+  })
+
+
+  app.get("/",(req,res)=>{
+     model.find({}).sort({username:-1}).exec((err,users)=>{
+         console.log(users)
+        res.send(users)
+     })
+
+  })
   module.exports= app

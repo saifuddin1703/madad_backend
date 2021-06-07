@@ -68,8 +68,8 @@ app.post("/login",(req,res)=>{
                     console.log(token)
                     console.log("signin successfull")
                 })
-                //after signin adding the user to loged in user collection
-                loginref.save(()=>{
+                // after signin adding the user to loged in user collection
+                loginref.save(()=>{  
                     console.log(token)
                     console.log("login successfull")
                 })

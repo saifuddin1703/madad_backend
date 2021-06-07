@@ -8,3 +8,6 @@ app.get("/",(req,res)=>{
         res.send(activities);
     })
 })
+
+
+module.exports=app;

@@ -1,9 +1,9 @@
 const express = require('express');
-const usermodel = require('../models/user');
+const messagemodel = require('../models/emergency_message');
 const app= express.Router()
 
 app.get("/",(req,res)=>{
-    usermodel.find({}).sort({username:-1}).exec((err,users)=>{
+    messagemodel.find({}).sort({username:-1}).exec((err,users)=>{
         res.send(users)
         console.log(users);
     })

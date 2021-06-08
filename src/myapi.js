@@ -55,7 +55,7 @@ app.use("/activities",activityrout)
           })
     
         var messagetosend= {
-          data:{messageid:message._id},
+          data:{messageid:String(message._id)},
           notification:{
             title:message.title,
             // checking if the length of the description is more than 100 words 

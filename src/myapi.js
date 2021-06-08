@@ -44,7 +44,7 @@ app.use("/activities",activityrout)
       message.save((err, message)=>{
         console.log("message saved to database");
           var activity= new activityModel({
-            sender:message.sendBy,
+            sender:message.sentBy,
             time:message.sentAt,
             title:message.title,
             messageid:message._id

@@ -52,6 +52,7 @@ app.use("/activities",activityrout)
 
           activity.save((err,activity)=>{
             console.log("activity saved");
+            console.log.(activity);
           })
     
         var messagetosend= {

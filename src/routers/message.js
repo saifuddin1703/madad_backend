@@ -10,4 +10,11 @@ app.get("/",(req,res)=>{
 })
 
 
+app.get("/:id",(req,res)=>{
+    const _id= Object(req.params.id);
+   messagemodel.findById({_id},(err,message)=>{
+       console.log(message);
+       res.status(200).send(message)
+   })
+  })
 module.exports= app
